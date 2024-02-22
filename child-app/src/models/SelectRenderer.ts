@@ -1,3 +1,4 @@
+import { dom } from "../helpers/dom";
 import { BaseFieldRenderer, renderOptions } from "./BaseFieldRenderer";
 
 export class SelectRenderer extends BaseFieldRenderer {
@@ -36,8 +37,10 @@ export class SelectRenderer extends BaseFieldRenderer {
 
     select.addEventListener("change", () => {
       if (select.value !== "") {
+        dom.appLoader.classList.add("show-loading");
         setTimeout(() => {
           options?.onSuccess(select.value);
+          dom.appLoader.classList.remove("show-loading");
         }, 1000);
       }
     });

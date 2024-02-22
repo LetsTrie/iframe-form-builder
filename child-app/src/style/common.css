@@ -27,7 +27,7 @@ select {
   /*  other styles for aesthetics */
   width: 100%;
   font-size: 14px;
-  padding: 0.675em 6em 0.675em 1em;
+  padding: 0.6em 6em 0.6em 1em;
   background-color: #fff;
   border: 1px solid #caced1;
   border-radius: 0.25rem;
@@ -48,7 +48,7 @@ select {
   border-left: var(--size) solid transparent;
   border-right: var(--size) solid transparent;
   border-top: var(--size) solid black;
-  top: 65%;
+  top: 67%;
 }
 
 .submit-btn {
@@ -88,5 +88,17 @@ select {
 }
 .form-control:focus {
   box-shadow: none;
-  border-color: #ced4da;
+  border-color: #b0b1b3;
+}
+
+.form-control {
+  border-color: #b0b1b3;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.font-14 {
+  font-size: 14px;
 }

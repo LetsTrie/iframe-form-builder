@@ -1,23 +1,29 @@
+* {
+  font-family: "Lato", sans-serif !important;
+}
+
 body {
   background-color: #f8fbff;
   padding: 10px;
 }
 
-* {
-  font-family: "Lato", sans-serif !important;
-}
-
 #child-iframe-container {
   display: none;
-  border: 2px dashed #111;
   margin-top: 10px;
   margin-bottom: 15px;
-  width: 70vh;
+  width: 576px;
 }
 
+@media (max-width: 768px) {
+  #child-iframe-container {
+    width: 100%;
+  }
+}
 #child-iframe-container iframe {
   border: none;
-  height: 30vh;
+  border: 2px dashed #111;
+  border-radius: 8px;
+  min-height: 40vh;
   width: 100%;
 }
 

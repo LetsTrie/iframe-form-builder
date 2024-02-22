@@ -1,3 +1,4 @@
+import { dom } from "../helpers/dom";
 import { BaseFieldRenderer, renderOptions } from "./BaseFieldRenderer";
 
 export class RadioRenderer extends BaseFieldRenderer {
@@ -6,7 +7,7 @@ export class RadioRenderer extends BaseFieldRenderer {
     wrapper.classList.add("mb-2");
 
     const label = document.createElement("label");
-    label.classList.add("d-block", "pb-1");
+    label.classList.add("d-block", "pb-1", "text-bold");
     label.textContent = this.field.label;
 
     wrapper.appendChild(label);
@@ -33,8 +34,10 @@ export class RadioRenderer extends BaseFieldRenderer {
       wrapper.appendChild(lineBreak);
 
       radioInput.addEventListener("change", () => {
+        dom.appLoader.classList.add("show-loading");
         setTimeout(() => {
           options?.onSuccess(radioInput.value);
+          dom.appLoader.classList.remove("show-loading");
         }, 1000);
       });
     });

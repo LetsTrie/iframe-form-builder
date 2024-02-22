@@ -1,0 +1,92 @@
+.mb-2 {
+  margin-bottom: 5px;
+}
+
+.pb-1 {
+  padding-bottom: 2px;
+}
+
+.pb-2 {
+  padding-bottom: 5px;
+}
+
+.d-block {
+  display: block;
+}
+
+.custom-select {
+  min-width: 350px;
+  position: relative;
+}
+
+select {
+  -moz-appearance: none;
+       appearance: none;
+  /*  safari  */
+  -webkit-appearance: none;
+  /*  other styles for aesthetics */
+  width: 100%;
+  font-size: 14px;
+  padding: 0.675em 6em 0.675em 1em;
+  background-color: #fff;
+  border: 1px solid #caced1;
+  border-radius: 0.25rem;
+  color: #000;
+  cursor: pointer;
+}
+
+.custom-select::before,
+.custom-select::after {
+  --size: 0.3rem;
+  content: "";
+  position: absolute;
+  right: 1rem;
+  pointer-events: none;
+}
+
+.custom-select::after {
+  border-left: var(--size) solid transparent;
+  border-right: var(--size) solid transparent;
+  border-top: var(--size) solid black;
+  top: 65%;
+}
+
+.submit-btn {
+  background-color: initial;
+  background-image: linear-gradient(#8614f8 0, #760be0 100%);
+  border-radius: 5px;
+  border-style: none;
+  box-shadow: rgba(245, 244, 247, 0.25) 0 1px 1px inset;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Inter, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: -4px;
+  outline: 0;
+  text-align: center;
+  transition: all 0.3s cubic-bezier(0.05, 0.03, 0.35, 1);
+  -moz-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: bottom;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  width: 100%;
+}
+
+.submit-btn:hover {
+  opacity: 0.7;
+}
+
+@media screen and (max-width: 1000px) {
+  .submit-btn {
+    font-size: 14px;
+  }
+}
+.form-control:focus {
+  box-shadow: none;
+  border-color: #ced4da;
+}

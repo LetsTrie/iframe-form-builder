@@ -1,0 +1,33 @@
+body {
+  background: #fffef2d3;
+  border-radius: 8px;
+  margin: 10px;
+  margin-top: 8px;
+}
+
+.form-group {
+  position: relative;
+}
+
+.form-group .form-control {
+  padding-right: 2.375rem;
+  overflow: hidden;
+}
+
+.form-group .form-control-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.375rem;
+  height: 100%;
+  color: #aaa;
+  cursor: pointer;
+}
+
+.d-inline-block {
+  display: inline-block;
+}
